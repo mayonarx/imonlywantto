@@ -1,5 +1,3 @@
-GIF89a;
-;; 
 <?php
 declare (strict_types = 1);
 
