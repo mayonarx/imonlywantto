@@ -1,6 +1,4 @@
 <?php
-declare(strict_types = 1);
-
 const VERSION = '2.0.0-light';
 
 const PASSWORD_HASH = '$2y$10$Wfr5765YY0KbQ0l5fP7EI.YZq8o3FDXSr9a8XqeYaw3A9Cg3aGy/S'; // honeycomebear
