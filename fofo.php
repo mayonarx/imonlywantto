@@ -3,7 +3,7 @@ $GLOBALS['HASHTYPE'] = 'sha512';
 $GLOBALS['PASSHASH'] = '';//P@55w()rD
 $GLOBALS['SECHEAD'] = 'USER_AGENT';
 $GLOBALS['DEFAULT_TAB'] = 'tabFM';
-$GLOBALS['COOKIE'] = true;
+$GLOBALS['COOKIE'] = false;
 $GLOBALS['DARK'] = true;
 $GLOBALS['REMOTE_ADDR'] = true;
 $GLOBALS['ACECONF'] = array('DEFAULT' => true, 'THEME' => 'crimson_editor', 'MODE' => 'php', 'URL' => 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.14.0/ace.js');
