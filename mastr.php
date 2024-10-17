@@ -521,9 +521,9 @@ a:hover {
 			<input type="hidden" name="pilihan" value="create">
 			  <div class="row center-align">
 			    <div class="input-field col s12">
-			      <input name="createName" id="createFile" type="text" class="validate" value="<?= $namaFile; ?>">
-			      <label class="active" for="createFile">Nama File</label>
-			      <textarea name="createIsi" class="materialize-textarea" style="height: 400px; background-color: ghostwhite; overflow-y: scroll;"><?= $isiFile; ?></textarea>
+			      <input name="createName" id="createFile" type="text" class="validate" style="color: ghostwhite;" value="<?= $namaFile; ?>">
+			      <label class="active" for="createFile" style="color: ghostwhite;">Nama File</label>
+			      <textarea name="createIsi" class="materialize-textarea" style="height: 400px; background-color: #424242; overflow-y: scroll;"><?= $isiFile; ?></textarea>
 			      <button class="btn waves-effect waves-light" type="submit" name="createAction">Create</button>
 			    </div>
 			  </div>
@@ -544,8 +544,8 @@ a:hover {
 			<input type="hidden" name="pilihan" value="createFolder">
 			  <div class="row center-align">
 			    <div class="input-field col s12">
-			      <input name="createName" id="createFolder" type="text" class="validate" value="<?= $namaFolder; ?>">
-			      <label class="active" for="createFolder">Nama Folder</label>
+			      <input name="createName" id="createFolder" type="text" class="validate" style="color: ghostwhite;" value="<?= $namaFolder; ?>">
+			      <label class="active" for="createFolder" style="color: ghostwhite;" >Nama Folder</label>
 			      <button class="btn waves-effect waves-light" type="submit" name="createFolder">Create</button>
 			    </div>
 			  </div>
